@@ -1,1 +1,20 @@
-# assignment-5
+# Assignment-5
+- [ ] If you haven't already please create a release for version **v0.0.4**. It should represent your work for *Assignment 4*.
+- [ ] Add code to your entity `Update` functions so your Ship keeps traveling through space even when the player stops pressing **Forward**
+  - [ ] For the ship, remember to add a friction factor so it stops moving after a while. Make this proportional to the ship's `mass`.
+ - [ ] Add code to your Asteroid `Update` so it has an initial impulse on creation and it travels around the map.
+ - [ ] Add a routine to create **N** number of asteroids. This should be at the top class of the Game, if you don't have an abstraction, this would be `App` taking into account the default boilerplate code.
+   - [ ] Bind two keys to increase and decrease **N**.
+   - [ ] Add code to measure your framerate and observe how to fluctuates as you add more Asteroids.
+   - [ ] Add a debugging tool and plot your framerate in the lower right corner of the game. This should appear and disappear when pressing the _F_ key. 
+   - All of this needs to happen at runtime.
+- [ ] Add a `radius` member to all your entities.
+  - [ ] Define a debugging function that draws a bounding circle for the rendered entities when pressing the _D_ key.
+  - [ ] Define a debugging function that draws a line segment from the center of your ship to nearby Asteroids. Use 2x from your radius as the proximity measurement. This also should appear when pressing the _D_ key.
+- [ ] Implement collision detection. The way this should work is simple, your game should only test for [circle-circle intersections](http://mathworld.wolfram.com/Circle-CircleIntersection.html).
+  - [ ] Asteroids should not collide with themselves but only with the Ship.
+- [ ] Add the ability to shoot to the ship.
+  - [ ] Bullets should appear at the tip of the ship.
+  - [ ] They should travel at some reasonable speed.
+  - [ ] When bullets collide with asteroids they should split them in smaller halves.
+  - [ ] If a bullet collides with the smallest Asteroid, the Asteroid should disappear.
